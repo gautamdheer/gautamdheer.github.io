@@ -1,0 +1,6 @@
+.facts{background-color:#173b6c; color:#fff;}
+.facts .section-title h2 {color:#fff;}
+.facts .section-title h2::after{background:#fff !important;}
+.facts .count-box span {color:#fff;}
+.facts .count-box p {color:#fff;}
+.facts .count-box i {color:#fff;}

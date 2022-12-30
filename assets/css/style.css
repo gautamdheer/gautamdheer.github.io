@@ -348,6 +348,7 @@ section {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  font-size: 13px;
 }
 
 .about .content ul strong {
