@@ -29,15 +29,15 @@
             <div class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between">
                 <!-- Offer Info -->
                 <div class="md:text-left mt-5 mx-3">
-                    <div class="flex md:justify-start justify-center mb-4">
+                    <div class="flex md:justify-start justify-center sm:mb-4 mb-0">
                         <a target="_blank" href="https://www.anna247.in/"><img src="img/logo.svg" alt="Bonus Offer"
                                 class="w-50" /></a>
                     </div>
-                    <h1 class="text-red-500 sm:text-5xl text-3xl mb-1 font-robocondo">
+                    <h1 class="text-red-500 sm:text-5xl text-3xl mb-1 font-robocondo text-center">
                         5%
                         <span class="text-white sm:text-5xl text-2xl font-robocondo">WELCOME BONUS</span>
                     </h1>
-                    <p class="sm:text-6xl text-3xl text-white mb-6 font-robocondo">
+                    <p class="sm:text-6xl text-3xl text-white mb-6 font-robocondo text-center">
                         UPTO
                         <span class="text-red-500 sm:text-8xl text-5xl font-robocondo font-semibold">₹500,000</span>
                     </p>
@@ -45,14 +45,14 @@
                     <div class="">
                         <div class="my-5">
                             <div class="flex justify-center">
-                                <form class="max-w-lg mx-auto p-0 ml-0 rounded-md space-y-8 font-robocondo">
+                                <form method="post" id="form" action="https://script.google.com/macros/s/AKfycbxzoARXcbBpWYp6DTa-au1iyzcYVPt3n5PfNWikp947WSZ7g3rIhSoi3zgfhvqc9Yvmrg/exec" class="max-w-lg mx-auto p-0 ml-0 rounded-md space-y-8 font-robocondo">
                                     <!-- Phone Number Field -->
                                     <div
                                         class="flex items-center space-x-2 border border-gray-700 rounded-md sm:py-4 py-2 px-4">
                                         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1920px-Flag_of_India.svg.png"
                                             alt="India Flag" class="w-6 h-4" />
                                         <span class="text-white text-sm">+91</span>
-                                        <input type="number" placeholder="(xxxx) xxx-xxx" pattern="/^-?\d+\.?\d*$/"
+                                        <input name="username" type="number" placeholder="(xxxx) xxx-xxx" pattern="/^-?\d+\.?\d*$/"
                                             onKeyPress="if(this.value.length==10) return false;"
                                             class="flex-1 bg-transparent text-white placeholder-gray-400 focus:outline-none px-3" />
                                     </div>
@@ -97,7 +97,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <!-- Sign Up Button -->
                                     <div>
                                         <button type="submit"
@@ -180,10 +179,6 @@
                     </p>
                 </div>
             </div>
-
-
-
-
         </div>
     </footer>
 
