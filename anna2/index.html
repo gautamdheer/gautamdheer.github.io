@@ -450,14 +450,14 @@
 
         let form = document.querySelector('#form');
         form.addEventListener('submit', (e)=>{
-            e.target.signup.innerHTML = "Signing Up....."
+            e.target.signup.innerHTML = "Signing Up.....";
             let d=new FormData(form);
             fetch(url, {
                 method:"POST",
                 body:d
             }).then((res)=>res.text())
             .then((finalRes) =>{
-                e.target.signup.innerHTML = "Sign Up"
+                e.target.signup.innerHTML = "Sign Up";
                 console.log(finalRes)
             })
             e.preventDefault();
