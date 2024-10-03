@@ -45,7 +45,7 @@
                     <div class="">
                         <div class="my-5">
                             <div class="flex justify-center">
-                                <form method="post" id="form" action="https://script.google.com/macros/s/AKfycbxzoARXcbBpWYp6DTa-au1iyzcYVPt3n5PfNWikp947WSZ7g3rIhSoi3zgfhvqc9Yvmrg/exec" class="max-w-lg mx-auto p-0 ml-0 rounded-md space-y-8 font-robocondo">
+                                <form method="post" id="form" class="max-w-lg mx-auto p-0 ml-0 rounded-md space-y-8 font-robocondo">
                                     <!-- Phone Number Field -->
                                     <div
                                         class="flex items-center space-x-2 border border-gray-700 rounded-md sm:py-4 py-2 px-4">
@@ -99,7 +99,7 @@
                                     </div>
                                     <!-- Sign Up Button -->
                                     <div>
-                                        <button type="submit"
+                                        <button name="signup" id="signup" type="submit"
                                             class="w-full py-3 text-white font-bold text-lg rounded-md bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600">
                                             SIGN UP
                                         </button>
@@ -445,6 +445,27 @@
         </div>
     </div>
 
+    <script>
+        let url = 'https://script.google.com/macros/s/AKfycbxzoARXcbBpWYp6DTa-au1iyzcYVPt3n5PfNWikp947WSZ7g3rIhSoi3zgfhvqc9Yvmrg/exec';
+
+        let form = document.querySelector('#form');
+        form.addEventListener('submit', (e)=>{
+            e.target.signup.innerHTML = "Signing Up....."
+            let d=new FormData(form);
+            fetch(url, {
+                method:"POST",
+                body:d
+            }).then((res)=>res.text())
+            .then((finalRes) =>{
+                e.target.signup.innerHTML = "Sign Up"
+                console.log(finalRes)
+            })
+            e.preventDefault();
+
+        })
+
+
+    </script>
     <!-- Script to handle the modal -->
     <script>
         function togglePassword() {
