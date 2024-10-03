@@ -46,6 +46,7 @@
                         <div class="my-5">
                             <div class="flex justify-center">
                                 <form method="post" id="form" class="max-w-lg mx-auto p-0 ml-0 rounded-md space-y-8 font-robocondo">
+                                    <div id="res" class="text-green-600 p-4 shadow-lg rounded font-semibold"></div>
                                     <!-- Phone Number Field -->
                                     <div
                                         class="flex items-center space-x-2 border border-gray-700 rounded-md sm:py-4 py-2 px-4">
@@ -459,8 +460,11 @@
             }).then((res)=>res.text())
             .then((finalRes) =>{
                 e.target.signup.innerHTML = "Sign Up";
-                console.log(finalRes)
-            })
+                document.getElementById('res').innerHTML = finalRes;
+                setTimeout(() => {
+                document.getElementById('res').innerHTML = '';
+                }, 5000);
+             })
             e.preventDefault();
 
         })
